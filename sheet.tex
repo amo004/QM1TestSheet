@@ -31,20 +31,6 @@
       .\] 
         
     \[
-      \sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \quad
-      \sigma_y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} \quad
-      \sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}
-    \]
- 
-    \[ 
-      [\sigma_i,\sigma_j] = \delta_{a b}I + i \epsilon_{ijk}\,\,\sigma_k
-    \]
-
-    \[
-      S_i = \frac{\hbar}{2}\sigma_i 
-    \]
-
-    \[
       \hat{p} = - i \hbar \frac{\partial}{\partial\,x} \quad
       \hat{x} = x \quad
       \hat{U} = e^{-i \hat{H} t / \hbar}
@@ -69,6 +55,70 @@
       \iff \frac{d \hat{A}}{dt} = \frac{1}{i \hbar}[\hat{H},\hat{A}] + 
       \frac{\partial \hat{A}}{\partial t} 
     \]
+
+    \subsection*{Two State Systems}
+      \[
+      \sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \quad
+      \sigma_y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} \quad
+      \sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}
+    \]
+
+      \[ 
+      [\sigma_i,\sigma_j] = \delta_{a b}I + i \epsilon_{ijk}\,\,\sigma_k \quad
+      S_i = \frac{\hbar}{2}\sigma_i 
+    \]
+    The arbitrary 2--state Hamiltonian can be expressed as a linear combination
+    of the $\sigma$ matrices and the identity matrix. This is sometimes written
+    as an inner product as below.
+    \[
+      \hat{H} = A \bullet S + c\,\mathbb{I}
+    .\] 
+
+    For a charge in a magnetic field, with components $B_x$, $B_y$, and $B_z$
+    the Hamiltonian is  \[
+      \hat{H} = 
+      \begin{pmatrix}
+        B_z & B_x - i B_y \\ 
+        B_x + i B_y  & - B_z
+      \end{pmatrix}
+    .\] 
+
+
+      \[
+      \ket{\uparrow} =
+      \begin{pmatrix}
+        1 \\ 
+        0
+      \end{pmatrix}
+      \quad \lambda_\uparrow = \frac{\hbar}{2} \qquad
+      \ket{\downarrow} = 
+      \begin{pmatrix}
+        0 \\ 
+        1
+      \end{pmatrix} \quad
+      \lambda_\downarrow = -\frac{\hbar}{2}
+      .\] 
+      \[
+      \ket{+} = \frac{1}{\sqrt 2}
+      \begin{pmatrix}
+        1 \\ 
+        1
+      \end{pmatrix}
+      \quad \lambda_+= \frac{\hbar}{2} \qquad
+    \]
+    \[
+      \ket{-} = \frac{1}{\sqrt 2}
+      \begin{pmatrix}
+        1 \\ 
+        -1
+      \end{pmatrix} \quad
+      \lambda_-= -\frac{\hbar}{2}
+      .\] 
+      
+
+
+
+
     \subsection*{Harmonic Oscillator} 
       \[
         V = \frac{1}{2} m \omega^2 x^2 \quad 
@@ -80,11 +130,13 @@
         \hat{p} = i \sqrt{\hbar m \omega /2 }(\hat{a}^\dagger - \hat{a}) \quad
         \hat{H} = \hbar \omega(\hat{a}^\dagger\hat{a} + \frac{1}{2})
       \]
-  
+      \[
+      \hat{N} = \hat{a}^\dagger \hat{a} \quad \hat{N} \ket{n} = n \ket{n} 
+      .\]  
       \[
         [\hat{a},\hat{a}^\dagger] = 1 \quad
-        \hat{a} \ket{n} = \sqrt{n + 1} \ket{n+1} \quad
-        \hat{a}^\dagger \ket{n} = \sqrt{n}\ket{n-1}
+        \hat{a}^\dagger \ket{n} = \sqrt{n + 1} \ket{n+1} \quad
+        \hat{a} \ket{n} = \sqrt{n}\ket{n-1}
       \]
   
       \[
