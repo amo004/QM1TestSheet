@@ -1,7 +1,8 @@
 \documentclass{article}
 \usepackage{geometry}
-\geometry{top=.5in,left=.5in,right=.5in,bottom=.5in}
+\geometry{top=.5in,left=.1in,right=.1in,bottom=.5in}
 
+\usepackage{pdfpages}
 \usepackage{physics}
 \usepackage{amsthm}
 \usepackage{lipsum}
@@ -282,6 +283,94 @@
       \[
         2\sin(\theta)\sin(\varphi) = \sin(\theta + \varphi) - \sin(\theta - \varphi)
       .\] 
+
+  \subsubsection*{Spherically Symmetric Potentials}
+    If a particle is subjected to a purely radial potential, its wavefunction
+    is given by $\varphi_{nlm} = R_{nl}Y_l^m$ where  $R_{lm}$ satisfies.
+    \[
+      \frac{d^2 R_{nl}}{d\rho^2} + \frac{2}{\rho}\frac{d R_{nl}}{d\rho} + 
+      (1 - \frac{l (l+1)}{\rho^2})R_{nl} = 0 \quad \rho = r\sqrt{2m(E-V)/\hbar^2} 
+    .\] 
+    \[
+      u_{nl} = r R_{nl} \quad \frac{-\hbar^2}{2m}\frac{d^2}{dr^2}u_{nl} + 
+      \left(\frac{l(l+1)\hbar^2}{2mr^2}+V\right)u_{nl} = E\, u_{nl}
+    .\] 
+  \section*{Propagators and Path integrals}
+    The propogator of a particle subject to a Hamiltonian $\hat H $ is given by 
+     \[
+       K(x',t;x,t_0) = \bra{x'} e^{- i \hat{H}(t-t_0)/\hbar} \ket{x} = 
+       \sum_a \bra{x'}\ket{a}\bra{a}\ket{x}e^{-i E_a (t - t_0)/\hbar}
+    .\] 
+    And note further that such propagators compose as 
+    \[
+      K(x'',t'';x,t_0) = \int K(x'',t'';x',t') \times K(x',t';x,t_0)d^3 x'
+    .\] 
+    Now, let the action of the classical analogue of a quantum system be given by 
+    \[
+      S = \int_{t_1}^{t_N} dt \mathcal{L}(x,\dot x) \text{ and }  \delta t = \frac{t_N - t_{1}}{N - 1}
+    .\] 
+    Then, the path integral for 
+    \[
+      \lim_{\delta t \rightarrow 0} \bra{x_N,t_N}\ket{x_1,t_1} = 
+      \int_{x_1}^{x_N} \mathcal{D}[x(t)] e^{i S(x,\dot x) / \hbar}
+    \]
+    where \[
+      \int_{x_1}^{x_N}\mathcal{D}[x(t)] = \lim_{N \rightarrow \infty}
+      (\frac{m}{2 \pi i \hbar  \,\delta t})^{(N-1)/2} 
+      \int dx_{N-1} \int dx_{N-2} \dots \int dx_1 
+    .\] 
+
+  \section*{Gauge Symmetry}
+    Classically, electromagnetic fields are invariant under a gauge transformation
+    of the form $\phi \rightarrow \phi + \lambda$ and  $A \rightarrow A + \nabla \Lambda$. 
+    Where $A$ is a vector potential (I neglect to place vector arrows). 
+    The Hamiltonian for a charged particle subject to such a potential is 
+     \[
+       \hat H = \frac{1}{2m} \hat \Pi^2 + e \phi \text{ with } \hat\Pi = p - \frac{e}{c}A
+    .\] 
+    In the Heisenberg picture, we have that \[
+      m \frac{d\hat{x}}{d t} = \hat{\Pi} \text{ and } [\hat{\Pi}_i,\hat{\Pi}_j] = 
+      \frac{i \hbar e}{c }\epsilon_{ijk} B_k
+    .\] 
+    Furthermore, we see that our wavefunction transforms as \[
+      \ket{\varphi} \rightarrow e^{i e \Lambda / \hbar c}\ket{\varphi}
+    .\] 
+    Note that the kinematical momentum $\hat \Pi $ is invariant under gauge
+    transformations by construction. 
+
+  \section*{Angular Momentum}
+    We denote the angular momentum operator as $\hat J$, and the components of this
+    operator as  $\hat J _i $.
+    Angular momentum is the generator of rotations; 
+    \[
+      \hat{R}(x_i,\theta) = \exp[- i \hat J _i \theta / \hbar]
+    .\] 
+    \[
+      \hat{J}_\pm = \hat{J}_x \pm i \hat{J}_y \quad
+      [\hat J _i, \hat J _j] = i \hbar \epsilon_{ijk} J_k \quad 
+      [\hat J _z, \hat{J}_\pm] = \pm \hbar \hat{J}_\pm \quad
+      [\hat J _+, \hat J _-] = 2\hbar J_z
+    .\]\[
+    (\hat{J}^2, \hat{J}_z)\ket{j,m} = (\hbar^2j(j+1),\hbar m)\ket{j,m} \quad
+    \]\[
+    \hat{J}_{\pm} \ket{j,m} = \sqrt{(j\mp m)(j \pm m + 1)}\ket{j,m\pm 1} \quad
+    \hat{J}_z = -i\hbar\frac{\partial}{\partial \phi}
+    .\]   
+    Suppose now that we have two different particles with angular momentum 
+    operators $\hat J _1$ and $\hat J _2$ so that  $\hat J = \hat J _1 +\hat J_2$.
+    Then  $2 J_1 \bullet J_2 = J^2 - J_2^2 - J_1^2$.
+
+    % start with CG coeffs Nov 13 lecture, and go through wigner D--matrix
+    % and tensor stuff and the wigner--eckhart theorem. Try to understand 
+    % wtf he means by the tensor product/ direct sum equivalence
+
+    \includepdf[pages=1]{./clebrpp.pdf}
+
+
+
+
+
+
 
 
 

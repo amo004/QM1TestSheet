@@ -1,0 +1,29 @@
+        bra{n,E}hat{H}ket{n+m,E}=0 ,,:,, |m| > 1
+        hat{tau}(a) ket{theta,E} = e^{-itheta}ket{theta,E}
+        hat{tau}(a) ket{x} = ket{x + a}
+      .] 
+      .]  
+      If $hat{H}$ is a Hamiltonian with potential that has period $a$
+      Momentum is the generator of translation. 
+      The textbf{Tight Binding Approximation} is the assumption that 
+      When the number of wells is finite, this quantizes $theta$
+      [
+      and some (potentially infinite) number of disconnected wells, we may 
+      combination of these states, $ket{theta,E} = sum_n e^{i n theta}ket{n,E}$
+      corresponds to the localization of the state, and  $E$ is the eigenvalue
+      label the eigenstates of  $hat H$ as  $ ket{n,E}$ where  $n$ 
+      of  $hat H $ corresponding to  $ket{n,E}$. We can find a linear 
+     Bloch s Theorem says that  in such a system    bra  x	/tmp/vFFOoPG/11.tex	/^      Then  $[\\hat{H},\\hat{Q}] = 0 \\implies \\frac{d\\hat{Q}}{dt} = 0\$$/;"	u
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+General Facts	/tmp/vFFOoPG/11.tex	/^  \\twocolumn$/;"	u
+Harmonic Oscillator	/tmp/vFFOoPG/11.tex	/^      .\\] $/;"	u
+Parity and Symmetry	/tmp/vFFOoPG/11.tex	/^      \\]$/;"	u
+Scattering and Wave mechanics	/tmp/vFFOoPG/11.tex	/^     in terms of  $k$.$/;"	u
+The WKB Approximation	/tmp/vFFOoPG/11.tex	/^   Which is unitary.$/;"	u
+Translation and Bloch s Theorem}
+Two State Systems	/tmp/vFFOoPG/11.tex	/^    \\]$/;"	u
