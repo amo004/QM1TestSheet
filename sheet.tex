@@ -1,6 +1,6 @@
 \documentclass{article}
 \usepackage{geometry}
-\geometry{top=.5in,left=.1in,right=.1in,bottom=.5in}
+\geometry{top=.5in,left=.3in,right=.3in,bottom=.5in}
 
 \usepackage{pdfpages}
 \usepackage{physics}
@@ -346,10 +346,12 @@
       \hat{R}(x_i,\theta) = \exp[- i \hat J _i \theta / \hbar]
     .\] 
     \[
+      \begin{split}
       \hat{J}_\pm = \hat{J}_x \pm i \hat{J}_y \quad
-      [\hat J _i, \hat J _j] = i \hbar \epsilon_{ijk} J_k \quad 
+      [\hat J _i, \hat J _j] = i \hbar \epsilon_{ijk} J_k \quad \\
       [\hat J _z, \hat{J}_\pm] = \pm \hbar \hat{J}_\pm \quad
       [\hat J _+, \hat J _-] = 2\hbar J_z
+    \end{split}
     .\]\[
     (\hat{J}^2, \hat{J}_z)\ket{j,m} = (\hbar^2j(j+1),\hbar m)\ket{j,m} \quad
     \]\[
@@ -463,6 +465,61 @@
     \end{split}
     .\] 
 
+    \subsubsection*{The Wigner--Eckhart Theorem and Corollaries}
+      The Wigner--Eckhart Theorem says that, if $T_q^k$ is a spherical tensor,
+      \[
+        \bra{\alpha',l\,m}T_q^k\ket{\alpha ,l,m} = \frac{1}{\sqrt{2 j' + 1}}
+      \bra{j,k;m,q}\ket{j,k;j',m'}\bra{\alpha',j'}|T^k|\ket{\alpha,j}
+      .\] 
+      The Wigner--3j symbols are written as 
+      \[
+      \begin{pmatrix}
+        j_1 & j_2 & j_3 \\
+        m_1 & m_2 & m_3
+      \end{pmatrix}
+      .\] 
+      \[
+        \begin{split}
+          \bra{j_1,j_2;m_1,m_2}\ket{j_1,j_2;j,m} = (-1)^{j_1+j_2+j} \sqrt{2j+1}
+          \begin{pmatrix}
+            j_2 & j_1 & j \\
+            m_1 & m_2 & -m
+          \end{pmatrix} \\
+          \begin{pmatrix}
+            j_1 & j_2 & j \\
+            m_1 & m_2 & m 
+          \end{pmatrix} = 
+          \begin{pmatrix}
+            j & j_1 & j_2 \\
+            m & m_1 & m_2 
+          \end{pmatrix} = (-1)^{j_1 + j_2 + j} 
+          \begin{pmatrix}
+            j_2 & j_1 &j \\
+            m_2 & m_1 & m
+          \end{pmatrix} \\
+          \begin{pmatrix}
+            j_1 & j_2 & j \\
+            -m_1 & -m_2 & -m 
+          \end{pmatrix} = (-1)^{j_1 + j_2 + j}
+          \begin{pmatrix}
+            j_1 & j_2 & j \\
+            m_1 & m_2 & m
+          \end{pmatrix} \\
+          (-1)^{1 - j - m}\frac{m}{\sqrt{j(j+1)(2j+1)}} = 
+          \begin{pmatrix}
+            j & 1 & j \\
+            m & 0 & -m
+          \end{pmatrix}
+        \end{split}
+      .\] 
+      The Projection theorem states that if $J_q$ is an angular momentum 
+      operator  and  $V_q$ is a rank one spherical tensor, 
+      \[
+        \bra{\alpha',j,m'}V_q\ket{\alpha,j,m} = 
+        \frac{\bra{\alpha',j,m'}J\bullet V\ket{\alpha,j,m}}{\hbar^2 j(j+1)}
+        \bra{j,m'}J_q\ket{j,m}
+      .\] 
+      
 
     % start with CG coeffs Nov 13 lecture, and go through wigner D--matrix
     % and tensor stuff and the wigner--eckhart theorem. Try to understand 
