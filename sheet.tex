@@ -154,6 +154,13 @@
       \[
         \hat{x}(t) = \hat{x}(0) \cos(\omega t) + \frac{\hat{p}(0)}{m \omega }\sin(\omega t)
       \]
+
+			\[
+				\braket{x'}{0} = \frac{1}{\sqrt{x_0 \sqrt{\pi}}} \exp\left[ -\frac{1}{2}
+				\left(\frac{x'}{x_0}\right)^2\right]
+				\quad
+				x_0 = \sqrt{\frac{\hbar}{m\omega}}
+			\]
     \subsection*{Parity and Symmetry}    
       The parity operator $\hat{P}$ is defined by its action on the position 
       operator, that is  $\hat{P}^\dagger \hat{x} \hat{P} = - \hat{x}$. Therefore
@@ -526,7 +533,12 @@
         \bra{\alpha',j,m'}V_q\ket{\alpha,j,m} = 
         \frac{\bra{\alpha',j,m'}J\bullet V\ket{\alpha,j,m}}{\hbar^2 j(j+1)}
         \bra{j,m'}J_q\ket{j,m}
-      .\] 
+      \] 
+			where
+			\[
+				J \bullet V = J_0^{(1)}V_0^{(1)} - J_1^{(1)}V_{-1}^{(1)} -
+				J_{-1}^{(1)}V_1^{(1)}.
+			\]
       
 
    % \onecolumn
