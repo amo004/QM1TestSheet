@@ -146,6 +146,10 @@
         \hat{a} \ket{n} = \sqrt{n}\ket{n-1}
       \]
   
+			\[
+				\expval{\hat{x}^2} = \frac{\hbar}{2 m \omega} \quad
+				\expval{\hat{p}^2} = \frac{\hbar m \omega}{2}
+			\]
       \[
         \hat{a}(t) = e^{-i \omega t}\hat{a}(0) \quad 
         \hat{p}(t) = - m \omega \hat{x}(0) \sin(\omega t) + \hat{p}(0) \cos(\omega t) 
@@ -154,6 +158,13 @@
       \[
         \hat{x}(t) = \hat{x}(0) \cos(\omega t) + \frac{\hat{p}(0)}{m \omega }\sin(\omega t)
       \]
+
+			\[
+				\braket{x'}{0} = \frac{1}{\sqrt{x_0 \sqrt{\pi}}} \exp\left[ -\frac{1}{2}
+				\left(\frac{x'}{x_0}\right)^2\right]
+				\quad
+				x_0 = \sqrt{\frac{\hbar}{m\omega}}
+			\]
     \subsection*{Parity and Symmetry}    
       The parity operator $\hat{P}$ is defined by its action on the position 
       operator, that is  $\hat{P}^\dagger \hat{x} \hat{P} = - \hat{x}$. Therefore
@@ -360,8 +371,8 @@
     .\]\[
     (\hat{J}^2, \hat{J}_z)\ket{j,m} = (\hbar^2j(j+1),\hbar m)\ket{j,m} \quad
     \]\[
-    \hat{J}_{\pm} \ket{j,m} = \sqrt{(j\mp m)(j \pm m + 1)}\ket{j,m\pm 1} \quad
-    \hat{J}_z = -i\hbar\frac{\partial}{\partial \phi}
+		\hat{J}_{\pm} \ket{j,m} = \hbar \sqrt{(j\mp m)(j \pm m + 1)}\ket{j,m\pm 1}
+		\quad \hat{J}_z = -i\hbar\frac{\partial}{\partial \phi}
     .\]   
     Suppose now that we have two different particles with angular momentum 
     operators $\hat J _1$ and $\hat J _2$ so that  $\hat J = \hat J _1 +\hat J_2$.
@@ -419,20 +430,21 @@
       \end{split}
     .\] 
    
-    If $T_q^k$ is a spherical tensor of rank  $k$, then 
+	If $\hat{T}_q^{(k)}$ is a spherical tensor of rank  $k$, then 
      \[
-    \bra{\alpha',l',m'} T_q^k \ket{\alpha, l, m} = 0 
+			 \bra{\alpha',l',m'} \hat{T}_q^{(k)} \ket{\alpha, l, m} = 0 
     \text{ unless } m' = m + q \text{ and } |j-k| \leq j' \leq j+k
     .\] 
     Cartesian vector operators satisfy the commutation relation
     \[
       [V_i, J_j] = i \hbar \epsilon_{ijk} V_k \text{ so }
-      V^1_{\pm 1} = \mp \frac{1}{\sqrt 2} (V_x \pm i V_y) \quad V_0^1 = V_z
+			V^{(1)}_{\pm 1} = \mp \frac{1}{\sqrt 2} (V_x \pm i V_y) \quad V_0^{(1)} = V_z
     .\] 
     Spherical tensors obey the equations (which suffices as a definition)
     \[
-      [\hat{J}_z , T_q^k] = \hbar q T_q^k \quad 
-      [\hat{J}_\pm , T_q^k ] = \hbar \sqrt{(k\mp q)(k\pm q + 1)}T_{q\pm 1}^k
+			[\hat{J}_z , T_q^{(k)}] = \hbar q T_q^{(k)} \quad 
+			[\hat{J}_\pm , T_q^{(k)} ] = \hbar \sqrt{(k\mp q)(k\pm q + 1)}T_{q\pm
+			1}^{(k)}
     \] 
     Any rank $2$ Cartesian tensor can be decomposed as 
     $T_{ij} = E \delta_{ij} + A_{ij} + S_{ij} $ where  \[
@@ -444,37 +456,39 @@
     Then, the components of the spherical tensors are 
     \[
       \begin{split}
-      T_0^0 = E ,\quad T_0^1 = A_{xy} ,\quad 
-      T_{\pm_1}^1 = \mp \frac{1}{\sqrt 2} (A_{yz} \pm i A_{zx}) ,\quad
-      T_0^2 = \sqrt{3/2} S_{zz}, \\
-      T_{\pm 1}^2 = \mp (S_zx \pm i S_zy) ,\quad 
-      T_{\pm 2}^2 = \frac{1}{2}(S_{xx} - S_{yy} \pm 2 i S_{xy})
+				T_0^{(0)} = E ,\quad T_0^{(1)} = A_{xy} ,\quad 
+				T_{\pm_1}^{(1)} = \mp \frac{1}{\sqrt 2} (A_{yz} \pm i A_{zx}) ,\quad
+				T_0^{(2)} = \sqrt{3/2} S_{zz}, \\
+      T_{\pm 1}^{(2)} = \mp (S_zx \pm i S_zy) ,\quad 
+      T_{\pm 2}^{(2)} = \frac{1}{2}(S_{xx} - S_{yy} \pm 2 i S_{xy})
       \end{split}
     \] 
-    If $X_{q_1}^{k_1}$ and $Z_{q_2}^{k_2}$ are spherical tensors then 
+		If $X_{q_1}^{(k_1)}$ and $Z_{q_2}^{(k_2)}$ are spherical tensors then 
     \[
-      T_q^k = \sum_{q_1, q_2} \bra{k_1,k_2;q_1,q_2}\ket{k_1,k_2;k,q}X^{k_1}_{q_1}Z_{q_2}^{k_2}
+			T_q^{(k)} = \sum_{q_1, q_2}
+			\bra{k_1,k_2;q_1,q_2}\ket{k_1,k_2;k,q}X^{(k_1)}_{q_1}Z_{q_2}^{(k_2)}
     .\] 
     
     is also a spherical tensor. This is inverted by 
     \[
-      X_{q_1}^{k_1}Z_{q_2}^{k_2} = \sum_{k=|k_1-k_2|}^{k_1+k_2} \sum_{q = -k}^k
+			X_{q_1}^{(k_1)}Z_{q_2}^{(k_2)} = \sum_{k=|k_1-k_2|}^{k_1+k_2} \sum_{q = -k}^k
       \bra{k_1,k_2;k,q}\ket{k_1,k_2;q_1,q_2}
     .\] 
     Explicitly, for combining two rank one spherical tensors, $U$ and  $V$ then,
      \[
     \begin{split}
-      T^2_{\pm 2} = U_{\pm 1} V_{\pm 1} \quad T^2_{\pm 1} = \frac{1}{\sqrt 2}
-      (U_{\pm 1}V_0  + U_0 V_{\pm 1}) \\
-      T^2_0 = \frac{1}{\sqrt 6 } (U_1 V_{-1} + 2 U_0 V_0 + U_{-1}V_1)
+			T^{(2)}_{\pm 2} = U_{\pm 1}^{(1)} V_{\pm 1}^{(1)} \quad T^{(2)}_{\pm 1} = \frac{1}{\sqrt 2}
+      (U_{\pm 1}^{(1)}V_0^{(1)}  + U_0^{(1)} V_{\pm 1}^{(1)}) \\
+			T^{(2)}_0 = \frac{1}{\sqrt 6 } (U_1^{(1)} V_{-1}^{(1)} + 2 U_0^{(1)} V_0^{(1)} + U_{-1}^{(1)}V_1^{(1)})
     \end{split}
     .\] 
 
     \subsubsection*{The Wigner--Eckhart Theorem and Corollaries}
-      The Wigner--Eckhart Theorem says that, if $T_q^k$ is a spherical tensor,
+			The Wigner--Eckhart Theorem says that, if $T_q^{(k)}$ is a spherical tensor,
       \[
-        \bra{\alpha',l\,m}T_q^k\ket{\alpha ,l,m} = \frac{1}{\sqrt{2 j' + 1}}
-      \bra{j,k;m,q}\ket{j,k;j',m'}\bra{\alpha',j'}|T^k|\ket{\alpha,j}
+				\bra{\alpha',l\,m}T_q^{(k)}\ket{\alpha ,l,m} =
+				\bra{j,k;m,q}\ket{j,k;j',m'}
+				\frac{\bra{\alpha',j'}|T^{(k)}|\ket{\alpha,j}}{\sqrt{2 j' + 1}}
       .\] 
       The Wigner--3j symbols are written as 
       \[
@@ -517,13 +531,18 @@
           \end{pmatrix}
         \end{split}
       .\] 
-      The Projection theorem states that if $J_q$ is an angular momentum 
-      operator  and  $V_q$ is a rank one spherical tensor, 
+		The Projection theorem states that if $J_q^{(1)}$ is an angular momentum 
+      operator and $V_q^{(1)}$ is a rank one spherical tensor, 
       \[
         \bra{\alpha',j,m'}V_q\ket{\alpha,j,m} = 
         \frac{\bra{\alpha',j,m'}J\bullet V\ket{\alpha,j,m}}{\hbar^2 j(j+1)}
         \bra{j,m'}J_q\ket{j,m}
-      .\] 
+      \] 
+			where
+			\[
+				J \bullet V = J_0^{(1)}V_0^{(1)} - J_1^{(1)}V_{-1}^{(1)} -
+				J_{-1}^{(1)}V_1^{(1)}.
+			\]
       
 
    % \onecolumn
